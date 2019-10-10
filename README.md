@@ -10,14 +10,18 @@
 MongoDB Community Server v4.2.0, OS Windows x64 x64 was used for this project
 2. **NodeJS**  
 v10.15.2 was used for this project
+3. **Nodemon** (Optional)  
+Install this utility globally if you want to monitor server updates without restarting the server. `npm install -g nodemon`
 
 
 
 ## Usage
 
-1. Create and start a local mongodb server  
-Open a terminal: `mongod --dbpath="D:\DEV\Mongo\mydb"`  
-Open and run on another terminal: `mongo mydb`
+1. Create and start a local mongodb server from a local directory.  
+   - Set the MongoDB data path only once  
+      `mongod --dbpath="<PATH_TO_LOCAL_DIR>"`  
+   - (or set to mongodb's default data directory)  
+      `mongod --dbpath=`
 
 2. Clone this repository  
 `git clone https://github.com/ciatph/mongodb-testing.git`
@@ -26,4 +30,17 @@ Open and run on another terminal: `mongo mydb`
 `npm install`
 
 4. Run the web server.  
-`npm run start`
+   - Normal command: `npm run start`
+   - If **nodemon** is installed: `npm run dev:server`
+
+
+## Querying
+
+Listed are sample API endpoints for testing.
+
+1. **http://localhost:3000/create/<KITTEN\_NAME>/<KITTEN\_COLOR>**
+   - Create and save new **Kitten** record.
+   - Replace `<KITTEN_NAME>` and `<KITTEN_COLOR>` with test values
+
+2. **http://localhost:3000/list**
+   - list all saved **Kitten** records

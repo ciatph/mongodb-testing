@@ -2,11 +2,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const PORT = process.env.PORT || 3000
+require('dotenv').config()
 
 const Kitten = require('./models/kitten.js')
 
 // Connect to mongoDB
-mongoose.connect(`mongodb://localhost/test`, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(`mongodb://localhost/${process.env.MONGO_DB_NAME}`, 
+  {useNewUrlParser: true, useUnifiedTopology: true})
 const mongodb = mongoose.connection
 
 mongodb.on('error', console.error.bind(console, 'connection error:'))
