@@ -18,7 +18,7 @@ Install this utility globally if you want to monitor server updates without rest
 
 ### Notes
 
-Methods of connecting to MongoDB using [**mongoose**](https://www.npmjs.com/package/mongoose) and [**mongodb**](https://www.npmjs.com/package/mongodb) (driver) are discussed in further detail in `index.js` and `index-mongodb.js` respectively. Refer to these files for references.
+Methods of connecting to MongoDB using [**mongoose**](https://www.npmjs.com/package/mongoose) and [**mongodb**](https://www.npmjs.com/package/mongodb) (driver) are discussed in further detail in `server/index.js` and `server/index-mongodb.js` respectively. Refer to these files for references.
 
 NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose also has a default management system for managing MongoDB objects thru **schemas** and **models**.
 
