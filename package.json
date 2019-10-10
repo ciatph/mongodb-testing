@@ -1,0 +1,27 @@
+{
+  "name": "mongodb-testing",
+  "version": "1.0.0",
+  "description": "Experiments and tests on using mongoose and mongodb.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciatph/mongodb-testing.git"
+  },
+  "keywords": [
+    "mongo",
+    "mongoose"
+  ],
+  "author": "ciatph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciatph/mongodb-testing/issues"
+  },
+  "homepage": "https://github.com/ciatph/mongodb-testing#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
