@@ -32,11 +32,14 @@ Install this utility globally if you want to monitor server updates without rest
 4. Run the web server.  
    - Normal command: `npm run start`
    - If **nodemon** is installed: `npm run dev:server`
+   - (Others): Run the webserver that connects to MongoDB using the [mongodb](https://www.npmjs.com/package/mongodb) driver: `npm run dev:mongodb`
+
+5. Follow the **Querying** guide for testing.
 
 
 ## Querying
 
-Listed are sample API endpoints for testing.
+Listed are sample API endpoints for testing, available only for running `index.js` (npm run start).
 
 1. **http://localhost:3000/create/<KITTEN\_NAME>/<KITTEN\_COLOR>**
    - Create and save new **Kitten** record.
