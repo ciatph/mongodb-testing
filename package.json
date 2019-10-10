@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ciatph/mongodb-testing#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.7.4"
   }
 }
