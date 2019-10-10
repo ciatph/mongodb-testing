@@ -15,11 +15,15 @@ v10.15.2 was used for this project
 
 ## Usage
 
-1. Clone this repository  
+1. Create and start a local mongodb server  
+Open a terminal: `mongod --dbpath="D:\DEV\Mongo\mydb"`  
+Open and run on another terminal: `mongo mydb`
+
+2. Clone this repository  
 `git clone https://github.com/ciatph/mongodb-testing.git`
 
-2. Install dependencies.  
+3. Install dependencies.  
 `npm install`
 
-3. Run the server.  
+4. Run the web server.  
 `npm run start`

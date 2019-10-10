@@ -8,7 +8,7 @@ mongoose.connect(`mongodb://localhost/test`, {useNewUrlParser: true, useUnifiedT
 const mongodb = mongoose.connection
 
 mongodb.on('error', console.error.bind(console, 'connection error:'))
-mongodb.on('open', function() {
+mongodb.once('open', function() {
   console.log('connected!')
 })
 
