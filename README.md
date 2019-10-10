@@ -11,13 +11,14 @@ MongoDB Community Server v4.2.0, OS Windows x64 x64 was used for this project
 2. **NodeJS**  
 v10.15.2 was used for this project
 3. **Nodemon** (Optional)  
-Install this utility globally if you want to monitor server updates without restarting the server. `npm install -g nodemon`
+Install this utility globally if you want to monitor server updates without restarting the server:  
+`npm install -g nodemon`
 
 
 
 ### Notes
 
-Methods of connecting to MongoDB using **mongoose** and **mongodb** (driver) are discussed in further detail in `index.js` and `index-mongodb.js` respectively. Refer to these files for references.
+Methods of connecting to MongoDB using [**mongoose**](https://www.npmjs.com/package/mongoose) and [**mongodb**](https://www.npmjs.com/package/mongodb) (driver) are discussed in further detail in `index.js` and `index-mongodb.js` respectively. Refer to these files for references.
 
 NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose also has a default management system for managing MongoDB objects thru **schemas** and **models**.
 
@@ -39,7 +40,8 @@ NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose al
 
 4. Run the web server.  
    - Normal command: `npm run start`
-   - If **nodemon** is installed: `npm run dev:server`
+   - If **nodemon** is installed (for debugging):  
+      `npm run dev:server`
    - (Others): Run the webserver that connects to MongoDB using the [mongodb](https://www.npmjs.com/package/mongodb) driver: `npm run dev:mongodb`
 
 5. Follow the **Querying** guide for testing.
