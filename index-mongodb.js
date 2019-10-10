@@ -12,7 +12,19 @@ MongoClient.connect(`mongodb://localhost:27017/${process.env.MONGO_DB_NAME}`, {
   }
 
   console.log('connected to db!')
-  db.close()
+  let dbo = db.db(process.env.MONGO_DB_NAME)
+  dbo.collection('kitten').insertOne({
+    name: 'test kitten',
+    color: 'blue'
+  }, (err, res) => {
+    if (err) {
+      console.log('error inserting default item')
+      throw err
+    }
+
+    console.log('1 record inserted')
+    db.close()
+  })
 })
 
 app.get('/', (req, res, next) => {
