@@ -15,6 +15,14 @@ Install this utility globally if you want to monitor server updates without rest
 
 
 
+### Notes
+
+Methods of connecting to MongoDB using **mongoose** and **mongodb** (driver) are discussed in further detail in `index.js` and `index-mongodb.js` respectively. Refer to these files for references.
+
+NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose also has a default management system for managing MongoDB objects thru **schemas** and **models**.
+
+
+
 ## Usage
 
 1. Create and start a local mongodb server from a local directory.  
