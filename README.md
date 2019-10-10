@@ -42,7 +42,8 @@ NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose al
    - Normal command: `npm run start`
    - If **nodemon** is installed (for debugging):  
       `npm run dev:server`
-   - (Others): Run the webserver that connects to MongoDB using the [mongodb](https://www.npmjs.com/package/mongodb) driver: `npm run dev:mongodb`
+   - (Others): Run the webserver that connects to MongoDB using the [mongodb](https://www.npmjs.com/package/mongodb) driver:  
+      `npm run dev:mongodb`
 
 5. Follow the **Querying** guide for testing.
 
