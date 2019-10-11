@@ -50,11 +50,29 @@ NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose al
 
 ## Querying
 
-Listed are sample API endpoints for testing, available only for running `index.js` (npm run start).
+Listed are sample API endpoints for testing, available only for running `index.js`  
+(`npm run start` or `npm run dev:server`).
 
-1. **http://localhost:3000/create/<KITTEN\_NAME>/<KITTEN\_COLOR>**
+
+### Cute Kittens API
+
+1. [`http://localhost:3000/kittens/create/<KITTEN_NAME>/<KITTEN_COLOR>`](http://localhost:3000/kittens/create/<KITTEN_NAME>/<KITTEN_COLOR>)
    - Create and save new **Kitten** record.
    - Replace `<KITTEN_NAME>` and `<KITTEN_COLOR>` with test values
 
-2. **http://localhost:3000/list**
+2. [`http://localhost:3000/kittens/list`](http://localhost:3000/kittens/list)
    - list all saved **Kitten** records
+
+
+### Game Characters API
+
+1. [`http://localhost:3000/game/create/<CHARACTER_CLASS>/<CHARACTER_NAME>?server=<SERVER_NAME>&guild=<GUILD_NAME>`](http://localhost:3000/game/create/<CHARACTER_CLASS>/<CHARACTER_NAME>?server=<SERVER_NAME>&guild=<GUILD_NAME>)
+   - Create and save a new game **Character** record.
+   - Replace the following placeholders with appropriate test values:
+	   - `<CHARACTER_CLASS>` = can either be **knight**, **wizard** or **elf**
+	   - `<CHARACTER_NAME>` = any String for a character name
+	   - `<SERVER_NAME>`= any String for server
+	   - `<GUILD_NAME>` = any String for guild name
+
+2. [`http://localhost:3000/game/list`](http://localhost:3000/game/list)
+	- list all saved game **Character** records.
