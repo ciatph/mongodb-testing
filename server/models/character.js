@@ -1,19 +1,5 @@
 const mongoose = require('mongoose')
-
-// Character Schema
-const characterSchema = new mongoose.Schema({
-  name: String,
-  class: String,
-  level: Number,
-  server: String,
-  guild: String,
-  stats: {
-    strength: Number,
-    vitality: Number,
-    energy: Number,
-    agility: Number
-  }
-})
+const characterSchema = require('./schemas/character.js')
 
 // Methods
 characterSchema.methods.getStats = function() {

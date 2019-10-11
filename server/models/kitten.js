@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const kittenSchema = require('../schemas/kitten.js')
+const kittenSchema = require('./schemas/kitten.js')
 
 kittenSchema.methods.speak = function() {
   let greeting = (this.name) ? 
