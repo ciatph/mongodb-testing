@@ -4,9 +4,9 @@
   "description": "Experiments and tests on using mongoose and mongodb.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev:mongodb": "nodemon watch server index-mongodb.js",
-    "dev:server": "nodemon watch server index.js",
+    "start": "node server/index.js",
+    "dev:server": "nodemon watch server server/index.js",
+    "dev:mongodb": "nodemon watch server server/index-mongodb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
