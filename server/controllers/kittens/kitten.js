@@ -1,5 +1,5 @@
 const express = require('express')
-const Kitten = require('../models/kitten')
+const Kitten = require('../../models/kitten')
 const kittenController = express.Router()
 
 kittenController.get('/create/:name/:color', ({

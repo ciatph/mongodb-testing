@@ -1,10 +1,10 @@
 const express = require('express')
-const Character = require('../models/character')
-const { CLASSES, BASE_STATS } = require('../constants/defines')
+const Character = require('../../models/character')
+const { CLASSES, BASE_STATS } = require('../../constants/defines')
 const characterController = express.Router()
 
 // Create a new character
-characterController.get('/game/:charclass/:name/create', ({
+characterController.get('/create/:charclass/:name', ({
   params: {
     name,
     charclass 
@@ -37,7 +37,7 @@ characterController.get('/game/:charclass/:name/create', ({
 
 
 // List all characters
-characterController.get('/game/list', (req, res) => {
+characterController.get('/list', (req, res) => {
   Character.find((err, __characters) => {
     if (err) {
       res.status(401).send('Error fetching data.')
@@ -47,7 +47,7 @@ characterController.get('/game/list', (req, res) => {
 })
 
 // Find a Character by name
-characterController.get('/game/:charclass/:name', ({
+characterController.get('/:charclass/:name', ({
   params: {
     charclass,
     name
@@ -63,7 +63,7 @@ characterController.get('/game/:charclass/:name', ({
 
 
 // Damage the Character's Vitality
-characterController.get('/game/:charclass/:name/dmg/:points', ({
+characterController.get('/:charclass/:name/dmg/:points', ({
   params: {
     charclass,
     name,

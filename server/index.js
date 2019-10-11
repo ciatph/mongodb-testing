@@ -2,7 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const PORT = process.env.PORT || 3000
-const controllers = require('./controllers')
+const controllersGame = require('./controllers/game')
+const controllersKittens = require('./controllers/kittens')
 require('dotenv').config()
 
 // Connect to mongoDB
@@ -15,9 +16,14 @@ mongodb.once('open', function() {
   console.log('connected!')
 })
 
-// API
-Object.keys(controllers).forEach((key) => {
-  app.use('/api', controllers[key])
+// Game API
+Object.keys(controllersGame).forEach((key) => {
+  app.use('/game', controllersGame[key])
+})
+
+// Kittens API
+Object.keys(controllersKittens).forEach((key) => {
+  app.use('/kittens', controllersKittens[key])
 })
 
 // App
