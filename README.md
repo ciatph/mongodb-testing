@@ -18,7 +18,7 @@ Install this utility globally if you want to monitor server updates without rest
 
 ### Notes
 
-Methods of connecting to MongoDB using [**mongoose**](https://www.npmjs.com/package/mongoose) and [**mongodb**](https://www.npmjs.com/package/mongodb) (driver) are discussed in further detail in `index.js` and `index-mongodb.js` respectively. Refer to these files for references.
+Methods of connecting to MongoDB using [**mongoose**](https://www.npmjs.com/package/mongoose) and [**mongodb**](https://www.npmjs.com/package/mongodb) (driver) are discussed in further detail in `server/index.js` and `server/index-mongodb.js` respectively. Refer to these files for references.
 
 NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose also has a default management system for managing MongoDB objects thru **schemas** and **models**.
 
@@ -50,11 +50,29 @@ NOTE: **mongoose** looks to have ab advantage over **mongodb** since mongoose al
 
 ## Querying
 
-Listed are sample API endpoints for testing, available only for running `index.js` (npm run start).
+Listed are sample API endpoints for testing, available only for running `index.js`  
+(`npm run start` or `npm run dev:server`).
 
-1. **http://localhost:3000/create/<KITTEN\_NAME>/<KITTEN\_COLOR>**
+
+### Cute Kittens API
+
+1. [`http://localhost:3000/kittens/create/<KITTEN_NAME>/<KITTEN_COLOR>`](http://localhost:3000/kittens/create/<KITTEN_NAME>/<KITTEN_COLOR>)
    - Create and save new **Kitten** record.
    - Replace `<KITTEN_NAME>` and `<KITTEN_COLOR>` with test values
 
-2. **http://localhost:3000/list**
+2. [`http://localhost:3000/kittens/list`](http://localhost:3000/kittens/list)
    - list all saved **Kitten** records
+
+
+### Game Characters API
+
+1. [`http://localhost:3000/game/create/<CHARACTER_CLASS>/<CHARACTER_NAME>?server=<SERVER_NAME>&guild=<GUILD_NAME>`](http://localhost:3000/game/create/<CHARACTER_CLASS>/<CHARACTER_NAME>?server=<SERVER_NAME>&guild=<GUILD_NAME>)
+   - Create and save a new game **Character** record.
+   - Replace the following placeholders with appropriate test values:
+	   - `<CHARACTER_CLASS>` = can either be **knight**, **wizard** or **elf**
+	   - `<CHARACTER_NAME>` = any String for a character name
+	   - `<SERVER_NAME>`= any String for server
+	   - `<GUILD_NAME>` = any String for guild name
+
+2. [`http://localhost:3000/game/list`](http://localhost:3000/game/list)
+	- list all saved game **Character** records.
